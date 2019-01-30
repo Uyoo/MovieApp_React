@@ -20,17 +20,27 @@ class Movie extends Component{
     }
 }
 
-class MoviePoster extends Component{
+// class MoviePoster extends Component{
 
-    static propTypes = {
-        poster: PropTypes.string.isRequired
-    }
+//     static propTypes = {
+//         poster: PropTypes.string.isRequired
+//     }
 
-    render(){
-        return(
-            <img src={this.props.poster} alt={this.props.title}></img>
-        );
-    }
+//     render(){
+//         return(
+//             <img src={this.props.poster} alt={this.props.title}></img>
+//         );
+//     }
+// }
+
+function MoviePoster({poster, title}){
+    return(
+        <img src={poster} alt={title}></img>
+    )
+}
+
+MoviePoster.propTypes = {
+    poster: PropTypes.string.isRequired
 }
 
 export default Movie;
